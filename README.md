@@ -10,7 +10,7 @@ A hobby web project using [Next.js](https://nextjs.org)
 - [PostgreSQL](https://www.postgresql.org/)
 - [Stripe](https://stripe.com/en-ca)
 
-## Live Site
+## Live Site - Currently not using Nextjs
 
 [famlam.ca](https://www.famlam.ca)
 
