@@ -22,4 +22,4 @@ A hobby web project using [Next.js](https://nextjs.org)
 
 **Not Deployed Yet**
 
-[Vercel](https://vercel.com/llasse/famlam.ca)
+[Vercel](https://vercel.com/llasse/famlam-ca)
