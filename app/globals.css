@@ -1,0 +1,187 @@
+/* ======================================== Tailwind CSS ======================================== */
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* ======================================== Scrollbar ======================================== */
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary) var(--color-primary-variant);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--color-primary);
+  border-radius: 14px;
+}
+
+/* ======================================== Debug ======================================== */
+
+/* * {
+  border: 1px solid red;
+} */
+
+/* ======================================== Root Vars ======================================== */
+
+:root {
+  /* Colors */
+  --color-primary: #81c3fd;
+  --color-alert: #ff7782;
+  --color-success: #41f1b6;
+  --color-warning: #ffbb55;
+  --color-info-dark: #7d8da1;
+  --color-info-light: #dce1eb;
+  --color-primary-variant: #7480ec;
+
+  /* Button colors */
+  --color-primary-button: #006600;
+  --color-secondary-button: #000000;
+
+  /* Boarders */
+  --card-border-radius: 2rem;
+  --border-radius-1: 0.4rem;
+  --border-radius-2: 0.8rem;
+  --border-radius-3: 1.2rem;
+
+  /* Padding */
+  --card-padding: 1.8rem;
+  --padding-1: 1.2rem;
+
+  /* Shadow */
+  --shadow-light: 0 2rem 3rem var(--color-light);
+  --shadow-dark: 0 2rem 3rem var(--color-dark);
+  --shadow-btn: 0 0 2rem var(--color-secondary-button);
+}
+
+/* ======================================== Everything ======================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI Variable", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======================================== Reusable ======================================== */
+
+/* Remove styling from all buttons */
+button {
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* H1 styling */
+h1 {
+  font-weight: 800;
+  font-size: 1.8rem;
+}
+
+/* H2 styling */
+h2 {
+  font-size: 1.4rem;
+}
+
+/* H3 styling */
+h3 {
+  font-size: 0.87rem;
+}
+
+/* H4 styling */
+h4 {
+  font-size: 0.8rem;
+}
+
+/* H5 styling */
+h5 {
+  font-size: 0.77rem;
+}
+
+/* Small text */
+small {
+  font-size: 0.75rem;
+}
+
+/* Profile photo */
+.profile-photo {
+  width: 2.8rem;
+  height: 2.8rem;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+/* Primary elements */
+.primary {
+  color: var(--color-primary);
+}
+
+/* Alert elements */
+.alert {
+  color: var(--color-alert);
+}
+
+/* Success elements */
+.success {
+  color: var(--color-success);
+}
+
+/* Warning elements */
+.warning {
+  color: var(--color-warning);
+}
+
+/* recent-upload icon */
+.recent-upload span {
+  background: var(--color-success);
+}
+
+/* recent-download icon */
+.recent-download span {
+  background: var(--color-alert);
+}
+
+/* ======================================== Dashboard | Servers ======================================== */
+
+/* Server state content */
+main table tbody td {
+  height: 2.8rem;
+}
+
+/* Server state remove last child border */
+main table tbody tr:last-child td {
+  border: none;
+}
+
+/* Server state show all */
+main a {
+  text-align: center;
+  display: block;
+  margin: 1rem auto;
+  color: var(--color-primary);
+}
