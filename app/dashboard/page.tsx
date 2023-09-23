@@ -1,6 +1,9 @@
 "use client";
 
-import { HiMiniCpuChip } from "react-icons/hi2";
+import Link from "next/link";
+
+import { HiOutlineCpuChip, HiOutlineCircleStack } from "react-icons/hi2";
+import { LuMemoryStick } from "react-icons/lu";
 
 import CircularProgressbar from "@/components/Dashboard/CircularProgressbar/CircularProgressbar";
 import RightColumn from "@/components/Dashboard/RightColumn/RightColumn";
@@ -24,11 +27,10 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
           <div className="grid lg:grid-cols-1 lg:gap-0 xl:grid-cols-3 xl:gap-6">
             {/* <!-- CPU usage --> */}
             <div className="mt-4 rounded-cardRadius bg-backgroundLight p-cardPadding shadow-Light hover:shadow-none dark:bg-backgroundVariant dark:shadow-Dark dark:hover:shadow-none">
-              <HiMiniCpuChip
+              <HiOutlineCpuChip
                 className="rounded-full bg-primary p-2 text-3xl text-light dark:text-dark"
                 size={40}
               />
-
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-dark dark:text-light">
                   CPU Usage
@@ -42,9 +44,10 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 
             {/* <!-- Memory usage --> */}
             <div className="mt-4 rounded-cardRadius bg-backgroundLight p-cardPadding shadow-Light hover:shadow-none dark:bg-backgroundVariant dark:shadow-Dark dark:hover:shadow-none">
-              <span className="rounded-full bg-alert p-2 text-3xl text-light dark:text-dark">
-                memory_alt
-              </span>
+              <LuMemoryStick
+                className="rounded-full bg-alert p-2 text-3xl text-light dark:text-dark"
+                size={40}
+              />
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-dark dark:text-light">
                   Memory Usage
@@ -58,9 +61,10 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
 
             {/* <!-- Disk usage --> */}
             <div className="mt-4 rounded-cardRadius bg-backgroundLight p-cardPadding shadow-Light hover:shadow-none dark:bg-backgroundVariant dark:shadow-Dark dark:hover:shadow-none">
-              <span className="rounded-full bg-success p-2 text-3xl text-light dark:text-dark">
-                album
-              </span>
+              <HiOutlineCircleStack
+                className="rounded-full bg-success p-2 text-3xl text-light dark:text-dark"
+                size={40}
+              />
               <div className="flex items-center justify-between">
                 <h3 className="text-base font-semibold text-dark dark:text-light">
                   Disk Space
@@ -95,7 +99,12 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
                     <td className="warning">72%</td>
                     <td className="success">7:31</td>
                     <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                   <tr>
@@ -105,7 +114,12 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
                     <td className="success">34%</td>
                     <td className="success">7:42</td>
                     <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                   <tr>
@@ -115,27 +129,12 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
                     <td className="success">6%</td>
                     <td className="success">7:42</td>
                     <td>
-                      <a href="#">Details</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>DNS</td>
-                    <td className="success">0.6%</td>
-                    <td className="warning">70%</td>
-                    <td className="success">7:42</td>
-                    <td>
-                      <a href="#">Details</a>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="alert">Down</td>
-                    <td>PrintSrv</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                   <tr>
@@ -145,33 +144,68 @@ const Dashboard: React.FC<DashboardProps> = ({ children }) => {
                     <td className="success">56%</td>
                     <td className="success">7:36</td>
                     <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                   <tr>
                     <td className="success">Up</td>
-                    <td>mysql</td>
+                    <td>SQL-DB</td>
                     <td className="success">1%</td>
                     <td className="success">49%</td>
                     <td className="success">7:39</td>
                     <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td className="success">Up</td>
+                    <td>DNS</td>
+                    <td className="success">0.6%</td>
+                    <td className="warning">70%</td>
+                    <td className="success">7:42</td>
+                    <td>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                   <tr>
                     <td className="alert">Down</td>
-                    <td>MailSrv</td>
+                    <td>PrintSrv</td>
                     <td>-</td>
                     <td>-</td>
                     <td>-</td>
                     <td>
-                      <a href="#">Details</a>
+                      <Link
+                        className="text-primary hover:underline"
+                        href="javascript:void(0)"
+                      >
+                        Details
+                      </Link>
                     </td>
                   </tr>
                 </tbody>
               </table>
             </div>
-            <a href="#">Show All</a>
+            <Link
+              className="text-center text-primary hover:underline mt-4 block"
+              href="javascript:void(0)"
+            >
+              Show All
+            </Link>
           </div>
         </div>
 

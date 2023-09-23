@@ -49,7 +49,8 @@ const NavEntry: React.FC<NavEntryProps> = ({ className }) => {
             bg-transparent
             px-6
             py-2
-            `
+            `,
+            className
           )}
         >
           <HiArrowRightOnRectangle size={24} />
@@ -65,10 +66,12 @@ const NavEntry: React.FC<NavEntryProps> = ({ className }) => {
             font-semibold
             text-light
             dark:text-dark
-            bg-transparent
+            dark:bg-white
+            bg-backgroundVariant
             px-6
             py-2
-            `
+            `,
+            className
           )}
         >
           <HiArrowLeftOnRectangle size={24} />

@@ -21,8 +21,7 @@ const Sidebar = () => {
       <div className="flex items-center justify-center p-padding1 lg:mx-6 lg:mb-0 lg:mt-6 xl:mx-6 xl:my-4">
         <button
           onClick={() => router.push("/")}
-          className="flex gap-8 lg:gap-0 xl:gap-8"
-          to="/"
+          className="flex items-center gap-8 lg:gap-0 xl:gap-8"
         >
           <Image className="h-12 w-12 scale-200" src={Logo} alt="Logo" />
           <h2 className="flex font-semibold text-dark lg:invisible dark:text-light xl:visible">
@@ -72,10 +71,7 @@ const Sidebar = () => {
         </button>
 
         {/* <!-- Upload --> */}
-        <button
-          className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24"
-          to="#"
-        >
+        <button className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24">
           <HiOutlineInbox size={24} />
           <h3 className="lg:invisible xl:visible">Email</h3>
         </button>
@@ -85,7 +81,7 @@ const Sidebar = () => {
 
         {/* <!-- Logout --> */}
       </nav>
-      <NavEntry className="dark:bg-white bg-transparent" />
+      <NavEntry className="text-muted w-auto" />
     </aside>
   );
 };

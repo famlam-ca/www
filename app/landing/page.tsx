@@ -7,7 +7,7 @@ import Navbar from "@/components/Navigation/Navbar";
 import Banner from "@/public/images/Banner.gif";
 
 interface LandingProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Landing: React.FC<LandingProps> = ({ children }) => {

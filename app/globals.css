@@ -165,23 +165,3 @@ small {
 .recent-download span {
   background: var(--color-alert);
 }
-
-/* ======================================== Dashboard | Servers ======================================== */
-
-/* Server state content */
-main table tbody td {
-  height: 2.8rem;
-}
-
-/* Server state remove last child border */
-main table tbody tr:last-child td {
-  border: none;
-}
-
-/* Server state show all */
-main a {
-  text-align: center;
-  display: block;
-  margin: 1rem auto;
-  color: var(--color-primary);
-}

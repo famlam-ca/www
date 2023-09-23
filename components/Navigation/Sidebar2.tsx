@@ -3,6 +3,7 @@
 import { useMemo } from "react";
 import { usePathname } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 import {
   HiOutlineHome,
   HiOutlineServerStack,
@@ -13,7 +14,6 @@ import {
 import Box from "../Box";
 import SidebarItem from "./SidebarItem";
 import Logo from "@/public/images/logo512.png";
-import Link from "next/link";
 
 interface SidebarProps {
   children: React.ReactNode;
@@ -34,13 +34,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         icon: HiOutlineSquares2X2,
         label: "Dashboard",
         active: pathname === "/dashboard",
-        href: "/search",
+        href: "/dashboard",
       },
       {
         icon: HiOutlineServerStack,
         label: "Server Manager",
         active: pathname === "/servers",
-        href: "/search",
+        href: "/servers",
       },
       {
         icon: HiOutlineInbox,
@@ -75,9 +75,13 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             py-4
             "
           >
-            <Link className="flex items-center gap-8" href="/">
-              <Image className="h-12 w-12 scale-200" src={Logo} alt="Logo" />
-              <h2 className="flex items-center font-semibold text-dark dark:text-light">
+            <Link className="flex items-center" href="/">
+              <Image
+                className="h-12 w-12 scale-200 mr-8"
+                src={Logo}
+                alt="Logo"
+              />
+              <h2 className="font-semibold text-dark dark:text-light">
                 H<span className="text-primary">HN</span>
               </h2>
             </Link>
@@ -86,8 +90,19 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
             ))}
           </div>
         </Box>
-        <Box className="overflow-y-auto h-full bg-backgroundLight dark:bg-backgroundDark">
-          <div>Hello World!</div>
+        <Box>
+          <div className="bg-primary h-1 rounded w-4/5 self-center"></div>
+        </Box>
+        <Box
+          className="
+        overflow-y-auto
+        h-full
+        px-5
+        py-4
+        bg-backgroundLight
+        dark:bg-backgroundDark"
+        >
+          <div>More content!</div>
         </Box>
       </div>
       <main>{children}</main>
