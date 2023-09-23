@@ -1,12 +1,16 @@
 import Navbar from "@/components/Navigation/Navbar";
 
-const About = () => {
+const Servers = () => {
   return (
     <main className="mt-0 h-screen bg-gradient-to-br from-backgroundLight via-light to-backgroundLight dark:from-backgroundDark dark:via-backgroundVariant dark:to-backgroundDark">
       <Navbar />
-      <h1 className="text-center">Hello World! | About</h1>
+      <iframe
+        src="https://panel.famlam.ca"
+        // seamless // no borders or scrollbars
+        className="h-calcNavbar block w-full"
+      />
     </main>
   );
 };
 
-export default About;
+export default Servers;
