@@ -66,7 +66,7 @@ const config: Config = {
       height: {
         login: "440px",
         register: "520px",
-        calcNavbar: "calc(100% - 5rem)",
+        calcNavbar: "calc(100% - 7rem)",
       },
       maxWidth: {
         maxImg: "6rem",

@@ -29,7 +29,9 @@ const Header = () => {
             <NavEntry />
           </div>
         )}
-        <NavDropdown />
+        <NavDropdown>
+          <HiBars3 />
+        </NavDropdown>
       </div>
     </div>
   );
