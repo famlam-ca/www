@@ -28,9 +28,6 @@ const Sidebar = () => {
             H<span className="text-primary">HN</span>
           </h2>
         </button>
-        <div className="hidden" id="close-btn">
-          <span className="material-symbols-rounded">close</span>
-        </div>
       </div>
 
       <nav className="flex flex-col whitespace-nowrap text-muted">
@@ -71,7 +68,10 @@ const Sidebar = () => {
         </button>
 
         {/* <!-- Upload --> */}
-        <button className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24">
+        <button
+          onClick={() => router.push("/mail")}
+          className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24"
+        >
           <HiOutlineInbox size={24} />
           <h3 className="lg:invisible xl:visible">Email</h3>
         </button>

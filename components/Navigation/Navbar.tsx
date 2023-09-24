@@ -10,7 +10,7 @@ import NavDropdown from "./NavDropdown";
 import Logo from "../Logo";
 
 interface NavbarProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {

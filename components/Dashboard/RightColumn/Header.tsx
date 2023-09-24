@@ -1,12 +1,12 @@
 "use client";
 
 import { HiUserCircle } from "react-icons/hi2";
-import { HiBars3 } from "react-icons/hi2";
 
 import { useUser } from "@/hooks/useUser";
 
 import NavDropdown from "@/components/Navigation/NavDropdown";
 import NavEntry from "@/components/Auth/NavEntry";
+import Link from "next/link";
 
 const Header = () => {
   const { user } = useUser();
@@ -14,24 +14,24 @@ const Header = () => {
   return (
     <div className="mb-6 mt-4 flex justify-end">
       <div className="right-4 flex gap-4 text-right max-lg:absolute max-lg:right-8 max-lg:top-8">
+        <NavDropdown />
         {user ? (
           <>
-            <div className="invisible text-dark dark:text-light sm:visible">
+            <div className="hidden text-dark dark:text-light sm:block">
               <p>
                 Hey, <b>Username</b>
               </p>
-              <small className="text-muted">Admin</small>
+              <small className="text-muted">Role</small>
             </div>
-            <HiUserCircle className="md:hidden" size={40} />
+            <Link href="/account">
+              <HiUserCircle size={40} />
+            </Link>
           </>
         ) : (
-          <div className="invisible text-dark dark:text-light sm:visible">
+          <div className="hidden text-dark dark:text-light sm:block">
             <NavEntry />
           </div>
         )}
-        <NavDropdown>
-          <HiBars3 />
-        </NavDropdown>
       </div>
     </div>
   );
