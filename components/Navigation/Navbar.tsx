@@ -27,7 +27,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
         <div className="hidden text-base md:flex md:items-center">
           <button
             onClick={() => router.push("/dashboard")}
-            className="ml-5 text-sm font-semibold text-dark hover:text-primary dark:text-light dark:hover:text-primary"
+            className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
           >
             Dashboard
           </button>
@@ -35,14 +35,14 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
           <nav className="flex">
             <button
               onClick={() => router.push("/servers")}
-              className="ml-5 text-sm font-semibold text-dark hover:text-primary dark:text-light dark:hover:text-primary"
+              className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
             >
               Server Manager
             </button>
             <Link
               href="https://panel.famlam.ca/"
               target="_blank"
-              className="ml-1 text-dark hover:text-primary dark:text-light dark:hover:text-primary"
+              className="ml-1 text-dark hover:text-primary transition-all dark:text-light dark:hover:text-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
 
             <button
               onClick={() => router.push("/about")}
-              className="ml-5 text-sm font-semibold text-dark hover:text-primary dark:text-light dark:hover:text-primary"
+              className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
             >
               About
             </button>

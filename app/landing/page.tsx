@@ -6,11 +6,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navigation/Navbar";
 import Banner from "@/public/images/Banner.gif";
 
-interface LandingProps {
-  children?: React.ReactNode;
-}
-
-const Landing: React.FC<LandingProps> = ({ children }) => {
+const Landing = () => {
   const router = useRouter();
 
   return (
@@ -54,7 +50,7 @@ const Landing: React.FC<LandingProps> = ({ children }) => {
                   </div>
                   <button
                     onClick={() => router.push("/dashboard")}
-                    className="mx-0 my-4 inline-flex items-center font-semibold text-white hover:text-primary md:mb-2 lg:mb-0"
+                    className="mx-0 my-4 group/hoverLeft inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
                   >
                     Explore
                     <svg
@@ -63,7 +59,7 @@ const Landing: React.FC<LandingProps> = ({ children }) => {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="ml-2 h-4 w-4"
+                      className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
                     >
                       <path
                         strokeLinecap="round"
@@ -73,8 +69,9 @@ const Landing: React.FC<LandingProps> = ({ children }) => {
                     </svg>
                   </button>
                 </div>
+
                 {/* Card Learning */}
-                <div className="mb-6 flex flex-col items-center p-4 text-center md:mb-0 md:w-1/2 lg:items-start lg:text-left">
+                <div className="mb-6 flex flex-col items-center p-4 text-center md:mb-0 md:w-1/2 whitespace-nowrap lg:items-start lg:text-left">
                   <div className="mb-5 inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-backgroundLight text-dark dark:bg-backgroundDark dark:text-light">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +98,7 @@ const Landing: React.FC<LandingProps> = ({ children }) => {
                   </div>
                   <button
                     onClick={() => router.push("/about")}
-                    className="mx-0 inline-flex items-center font-semibold text-white hover:text-primary md:mb-2 lg:mb-0"
+                    className="mx-0 inline-flex items-center group/hoverLeft font-semibold text-primary md:mb-2 lg:mb-0"
                   >
                     Learn More
                     <svg
@@ -110,7 +107,7 @@ const Landing: React.FC<LandingProps> = ({ children }) => {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="ml-2 h-4 w-4"
+                      className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
                     >
                       <path
                         strokeLinecap="round"
