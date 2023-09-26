@@ -11,7 +11,6 @@ import {
 } from "react-icons/hi2";
 
 import Logo from "@/public/images/logo512.png";
-import NavEntry from "../Auth/NavEntry";
 
 const Sidebar = () => {
   const router = useRouter();
@@ -81,7 +80,6 @@ const Sidebar = () => {
 
         {/* <!-- Logout --> */}
       </nav>
-      <NavEntry className="text-muted w-auto" />
     </aside>
   );
 };

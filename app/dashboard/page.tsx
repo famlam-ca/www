@@ -9,11 +9,7 @@ import CircularProgressbar from "@/components/Dashboard/CircularProgressbar/Circ
 import RightColumn from "@/components/Dashboard/RightColumn/RightColumn";
 import Sidebar from "@/components/Navigation/Sidebar";
 
-interface DashboardProps {
-  children: React.ReactNode;
-}
-
-const Dashboard: React.FC<DashboardProps> = ({ children }) => {
+const Dashboard = () => {
   return (
     <main className="mt-0 h-full bg-backgroundLight  dark:bg-backgroundDark">
       <section className="mx-4 grid gap-7 max-md:grid-cols-dashboardMd md:mx-8 lg:m-auto lg:ml-0 lg:mr-8 lg:grid-cols-dashboardLg xl:grid-cols-dashboardXl ">

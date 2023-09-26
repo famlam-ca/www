@@ -15,7 +15,7 @@ const Box: React.FC<BoxProps> = ({ children, className }) => {
         rounded-lg
         h-fit
         w-full
-      `,
+        `,
           className
         )}
       >

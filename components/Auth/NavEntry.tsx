@@ -13,7 +13,7 @@ import Button from "../Button";
 import useAuthModal from "@/hooks/useAuthModal";
 
 interface NavEntryProps {
-  className?: string;
+  className: string;
 }
 
 const NavEntry: React.FC<NavEntryProps> = ({ className }) => {
