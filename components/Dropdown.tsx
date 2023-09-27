@@ -12,6 +12,7 @@ import {
   HiCheck,
   HiChevronRight,
   HiArrowLeftOnRectangle,
+  HiArrowRightOnRectangle,
 } from "react-icons/hi2";
 
 import { useUser } from "@/hooks/useUser";
@@ -172,7 +173,7 @@ const Dropdown = () => {
             >
               Sign Out
               <div className=" ml-auto">
-                <HiArrowLeftOnRectangle size={20} />
+                <HiArrowRightOnRectangle size={20} />
               </div>
             </DropdownMenu.Item>
           ) : (
