@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import Link from "next/link";
 
 import Navbar from "@/components/Navigation/Navbar";
 import Banner from "@/public/images/Banner.gif";
@@ -119,7 +120,31 @@ const Landing = () => {
                 </div>
               </div>
             </div>
-            <Image className="w-auto md:max-w-md" alt="Banner" src={Banner} />
+            {/* Banner and credit to HomeLab gif */}
+            <span className="text-primary text-xs flex flex-col">
+              <Image className="w-auto md:max-w-md" alt="Banner" src={Banner} />
+              <Link
+                href="https://myhomelab.gr/"
+                className="group/hoverLeft flex font-semibold"
+                target="_blank"
+              >
+                MyHomeLab
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="1.5"
+                  stroke="currentColor"
+                  className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+                  />
+                </svg>
+              </Link>
+            </span>
           </div>
         </section>
       </Navbar>
