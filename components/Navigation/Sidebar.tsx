@@ -44,7 +44,7 @@ const Sidebar = () => {
           className="flex items-center gap-8 lg:gap-0 xl:gap-8"
         >
           <Image className="h-12 w-12 scale-200" src={Logo} alt="Logo" />
-          <h2 className="flex font-semibold text-dark lg:invisible dark:text-light xl:visible">
+          <h2 className="flex font-semibold text-dark dark:text-light lg:invisible xl:visible">
             H<span className="text-primary">HN</span>
           </h2>
         </button>

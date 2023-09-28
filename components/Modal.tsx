@@ -19,18 +19,18 @@ const Modal: React.FC<ModalProps> = ({
   return (
     <Dialog.Root open={isOpen} defaultOpen={isOpen} onOpenChange={onChange}>
       <Dialog.Portal>
-        <Dialog.Overlay className="backdrop-blur-sm fixed inset-0" />
-        <Dialog.Content className="fixed shadow-Light dark:shadow-Dark top-[50%] left-[50%] max-h-full h-full md:h-auto md:max-h-[85vh] w-full md:w-[90vw] md:max-w-[450px] translate-x-[-50%] translate-y-[-50%] rounded-md bg-backgroundLight dark:bg-backgroundDark p-[20px] focus:outline-none">
-          <Dialog.Title className="text-xl text-center font-bold mb-4">
+        <Dialog.Overlay className="fixed inset-0 backdrop-blur-sm" />
+        <Dialog.Content className="fixed left-[50%] top-[50%] h-full max-h-full w-full translate-x-[-50%] translate-y-[-50%] rounded-md bg-backgroundLight p-[20px] shadow-Light focus:outline-none dark:bg-backgroundDark dark:shadow-Dark md:h-auto md:max-h-[85vh] md:w-[90vw] md:max-w-[450px]">
+          <Dialog.Title className="mb-4 text-center text-xl font-bold">
             {title}
           </Dialog.Title>
-          <Dialog.Description className="mb-5 text-sm leading-normal text-center">
+          <Dialog.Description className="mb-5 text-center text-sm leading-normal">
             {description}
           </Dialog.Description>
           <div>{children}</div>
           <Dialog.Close asChild>
-            <button className="text-dark dark:text-light hover:text-alert dark:hover:text-alert absolute top-[10px] right-[10px] inline-flex h-[25px] w-[25px] appearance-none items-center justify-center rounded-full focus:outline-none">
-              <IoMdClose size={20} />
+            <button className="absolute right-0 top-0 inline-flex h-8 w-8 appearance-none items-center justify-center rounded-bl-lg bg-primary text-dark transition hover:bg-alert hover:text-light focus:outline-none">
+              <IoMdClose size={24} />
             </button>
           </Dialog.Close>
         </Dialog.Content>

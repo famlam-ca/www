@@ -10,21 +10,21 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         type={type}
         className={twMerge(
           `
+        font=bold
         w-full
         rounded-full
-        bg-primary
         border
         border-transparent
+        bg-primary
         px-3
         py-3
-        disabled:cursor-not-allowed
-        disabled:opacity-50
         text-black
-        font=bold
+        transition
         hover:opacity-75
-        transition 
+        disabled:cursor-not-allowed
+        disabled:opacity-50 
     `,
-          className
+          className,
         )}
         disabled={disabled}
         ref={ref}
@@ -33,7 +33,7 @@ const Button = forwardRef<HTMLButtonElement, ButtonProps>(
         {children}
       </button>
     );
-  }
+  },
 );
 
 Button.displayName = "Button";

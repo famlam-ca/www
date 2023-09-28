@@ -120,7 +120,7 @@ const Dropdown = () => {
                     <HiCheck size={15} />
                   </DropdownMenu.ItemIndicator>
                   <span>Dark Mode</span>
-                  <div className="text-dark dark:text-light ml-auto">
+                  <div className="ml-auto text-dark dark:text-light">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"

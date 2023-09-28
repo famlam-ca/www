@@ -10,7 +10,7 @@ const Progressbar = () => {
   useEffect(() => {
     const interval = setInterval(
       () => setNumber(Math.floor(Math.random() * 100 + 1)),
-      300000 // 5 min
+      300000, // 5 min
     );
 
     return () => {

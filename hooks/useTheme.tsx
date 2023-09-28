@@ -21,7 +21,7 @@ const ThemeToggle = () => {
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
-          className="rounded-full dark:bg-backgroundDark p-2 text-lg text-light shadow-none outline-none ring-transparent focus:outline-none"
+          className="rounded-full p-2 text-lg text-light shadow-none outline-none ring-transparent focus:outline-none dark:bg-backgroundDark"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

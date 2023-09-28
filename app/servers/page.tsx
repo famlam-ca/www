@@ -7,7 +7,7 @@ const Servers = () => {
       <iframe
         src="https://panel.famlam.ca"
         // seamless // no borders or scrollbars
-        className="h-calcNavbar block w-full"
+        className="block h-calcNavbar w-full"
       />
     </main>
   );

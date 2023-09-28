@@ -19,7 +19,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
   return (
     <div className="w-full">
       <nav className="flex items-center max-md:justify-center">
-        <div className="md:ml-4 md:ml lg:ml-32">
+        <div className="md:ml md:ml-4 lg:ml-32">
           <Logo />
         </div>
         <NavDropdown />
@@ -42,7 +42,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
             <Link
               href="https://panel.famlam.ca/"
               target="_blank"
-              className="ml-1 text-dark hover:text-primary transition-all dark:text-light dark:hover:text-primary"
+              className="ml-1 text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

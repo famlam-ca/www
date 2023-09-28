@@ -197,7 +197,7 @@ const Dashboard = () => {
               </table>
             </div>
             <Link
-              className="text-center text-primary hover:underline mt-4 block"
+              className="mt-4 block text-center text-primary hover:underline"
               href="javascript:void(0)"
             >
               Show All

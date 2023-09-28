@@ -12,7 +12,11 @@ import { useUser } from "@/hooks/useUser";
 import Button from "../Button";
 import useAuthModal from "@/hooks/useAuthModal";
 
-const NavEntry = () => {
+interface NavEntryProps {
+  className?: string;
+}
+
+const NavEntry: React.FC<NavEntryProps> = ({ className }) => {
   const router = useRouter();
   const authModal = useAuthModal();
 
@@ -39,13 +43,14 @@ const NavEntry = () => {
             `
             flex
             items-center
-            font-semibold
-            text-dark
-            dark:text-light
             bg-transparent
             px-6
             py-2
-            `
+            font-semibold
+            text-dark
+            dark:text-light
+            `,
+            className,
           )}
         >
           <HiArrowRightOnRectangle size={24} />
@@ -58,14 +63,15 @@ const NavEntry = () => {
             `
             flex
             items-center
-            font-semibold
-            text-light
-            dark:text-dark
-            dark:bg-white
             bg-backgroundVariant
             px-6
             py-2
-            `
+            font-semibold
+            text-light
+            dark:bg-white
+            dark:text-dark
+            `,
+            className,
           )}
         >
           <HiArrowLeftOnRectangle size={24} />

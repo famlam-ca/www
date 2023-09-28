@@ -51,7 +51,7 @@ const Landing = () => {
                   </div>
                   <button
                     onClick={() => router.push("/dashboard")}
-                    className="mx-0 my-4 group/hoverLeft inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
+                    className="group/hoverLeft mx-0 my-4 inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
                   >
                     Explore
                     <svg
@@ -60,7 +60,7 @@ const Landing = () => {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
+                      className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4"
                     >
                       <path
                         strokeLinecap="round"
@@ -72,7 +72,7 @@ const Landing = () => {
                 </div>
 
                 {/* Card Learning */}
-                <div className="mb-6 flex flex-col items-center p-4 text-center md:mb-0 md:w-1/2 whitespace-nowrap lg:items-start lg:text-left">
+                <div className="mb-6 flex flex-col items-center whitespace-nowrap p-4 text-center md:mb-0 md:w-1/2 lg:items-start lg:text-left">
                   <div className="mb-5 inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-backgroundLight text-dark dark:bg-backgroundDark dark:text-light">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -99,7 +99,7 @@ const Landing = () => {
                   </div>
                   <button
                     onClick={() => router.push("/about")}
-                    className="mx-0 inline-flex items-center group/hoverLeft font-semibold text-primary md:mb-2 lg:mb-0"
+                    className="group/hoverLeft mx-0 inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
                   >
                     Learn More
                     <svg
@@ -108,7 +108,7 @@ const Landing = () => {
                       viewBox="0 0 24 24"
                       strokeWidth="1.5"
                       stroke="currentColor"
-                      className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
+                      className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4"
                     >
                       <path
                         strokeLinecap="round"
@@ -121,7 +121,7 @@ const Landing = () => {
               </div>
             </div>
             {/* Banner and credit to HomeLab gif */}
-            <span className="text-primary text-xs flex flex-col">
+            <span className="flex flex-col text-xs text-primary">
               <Image className="w-auto md:max-w-md" alt="Banner" src={Banner} />
               <Link
                 href="https://myhomelab.gr/"
@@ -135,7 +135,7 @@ const Landing = () => {
                   viewBox="0 0 24 24"
                   strokeWidth="1.5"
                   stroke="currentColor"
-                  className="ml-2 h-4 w-4 group-hover/hoverLeft:ml-4 transition-all"
+                  className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4"
                 >
                   <path
                     strokeLinecap="round"

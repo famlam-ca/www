@@ -15,10 +15,10 @@ const Logo: React.FC<LogoProps> = ({ className }) => {
   return (
     <button
       onClick={() => router.push("/")}
-      className="title-font mr-8 flex gap-4 font-medium md:mb-0 items-center justify-center"
+      className="title-font mr-8 flex items-center justify-center gap-4 font-medium md:mb-0"
     >
       <Image property="1" src={logo} alt="Logo" className="h-20 w-20" />
-      <h2 className="font-semibold text-2xl text-dark dark:text-light">
+      <h2 className="text-2xl font-semibold text-dark dark:text-light">
         H<span className="text-primary">HN</span>
       </h2>
     </button>

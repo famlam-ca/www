@@ -7,7 +7,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="w-full dark:bg-backgroundDark bg-light">
+    <footer className="w-full bg-light dark:bg-backgroundDark">
       <div className="mx-auto max-w-screen-xl p-4 md:flex md:items-center md:justify-between">
         <span className="flex items-center text-sm text-dark dark:text-light sm:text-center">
           © 2023&nbsp;

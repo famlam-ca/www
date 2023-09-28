@@ -49,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
         href: "/email",
       },
     ],
-    [pathname]
+    [pathname],
   );
 
   return (
@@ -57,27 +57,27 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
       <div
         className="
         hidden
-        md:flex
-        flex-col
-        gap-2
         h-full
         w-72
+        flex-col
+        gap-2
         p-2
+        md:flex
         "
       >
         <Box>
           <div
             className="
             flex
-            bg-backgroundLight dark:bg-backgroundDark
-            flex-col
+            flex-col bg-backgroundLight
             px-5
             py-4
+            dark:bg-backgroundDark
             "
           >
             <Link className="flex items-center" href="/">
               <Image
-                className="h-12 w-12 scale-200 mr-8"
+                className="mr-8 h-12 w-12 scale-200"
                 src={Logo}
                 alt="Logo"
               />
@@ -91,15 +91,15 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           </div>
         </Box>
         <Box>
-          <div className="bg-primary h-1 rounded w-4/5 self-center"></div>
+          <div className="h-1 w-4/5 self-center rounded bg-primary"></div>
         </Box>
         <Box
           className="
-        overflow-y-auto
         h-full
+        overflow-y-auto
+        bg-backgroundLight
         px-5
         py-4
-        bg-backgroundLight
         dark:bg-backgroundDark"
         >
           <div>More content!</div>
