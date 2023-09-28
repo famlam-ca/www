@@ -13,13 +13,13 @@ const Landing = () => {
   return (
     <main className="mt-0 h-screen bg-gradient-to-br from-backgroundLight via-light to-backgroundLight dark:from-backgroundDark dark:via-backgroundVariant dark:to-backgroundDark">
       <Navbar>
-        <section className="body-font align-center flex justify-center text-gray-700">
+        <section className="flex text-muted">
           <div className="container mx-auto flex flex-col items-center px-5 py-16 md:mt-40 md:flex-row lg:mt-48 lg:px-20 lg:py-24">
             <div className="mb-16 flex w-full flex-col items-center pt-0  text-left md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24 lg:text-center">
               <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-primary">
                 Welcome, Enjoy Your Stay!
               </h2>
-              <h1 className="text-2x1 title-font mb-8 text-center font-bold tracking-tighter text-dark dark:text-light lg:text-left lg:text-5xl">
+              <h1 className="text-2x1 mb-8 text-center font-bold tracking-tighter text-dark dark:text-light lg:text-left lg:text-5xl">
                 Humble Home Network
               </h1>
               <div className="-mx-4 -mb-10 -mt-4 flex flex-col sm:-m-4 md:flex-row">
@@ -72,7 +72,7 @@ const Landing = () => {
                 </div>
 
                 {/* Card Learning */}
-                <div className="mb-6 flex flex-col items-center whitespace-nowrap p-4 text-center md:mb-0 md:w-1/2 lg:items-start lg:text-left">
+                <div className="mb-6 flex flex-col items-center p-4 text-center md:mb-0 md:w-1/2 lg:items-start lg:text-left 2xl:whitespace-nowrap">
                   <div className="mb-5 inline-flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full bg-backgroundLight text-dark dark:bg-backgroundDark dark:text-light">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -121,30 +121,18 @@ const Landing = () => {
               </div>
             </div>
             {/* Banner and credit to HomeLab gif */}
-            <span className="flex flex-col text-xs text-primary">
-              <Image className="w-auto md:max-w-md" alt="Banner" src={Banner} />
-              <Link
-                href="https://myhomelab.gr/"
-                className="group/hoverLeft flex font-semibold"
-                target="_blank"
-              >
-                MyHomeLab
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  strokeWidth="1.5"
-                  stroke="currentColor"
-                  className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
-                  />
-                </svg>
-              </Link>
-            </span>
+            <Link
+              href="https://myhomelab.gr/"
+              className="flex flex-col text-center font-semibold hover:text-primary hover:underline"
+              target="_blank"
+            >
+              <Image
+                className="w-auto md:max-w-md"
+                alt="Banner credit"
+                src={Banner}
+              />
+              <span className="mt-2 transition">myhomelab.gr</span>
+            </Link>
           </div>
         </section>
       </Navbar>

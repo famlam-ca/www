@@ -1,14 +1,16 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { HiUserCircle } from "react-icons/hi2";
 
 import { useUser } from "@/hooks/useUser";
 
 import NavDropdown from "@/components/Navigation/NavDropdown";
 import NavEntry from "@/components/Auth/NavEntry";
-import Link from "next/link";
 
 const Header = () => {
+  const router = useRouter();
+
   const { user } = useUser();
 
   return (
@@ -23,9 +25,9 @@ const Header = () => {
               </p>
               <small className="text-muted">Role</small>
             </div>
-            <Link href="/account">
+            <button onClick={() => router.push("/account")} className="flex">
               <HiUserCircle size={40} />
-            </Link>
+            </button>
           </>
         ) : (
           <div className="hidden text-dark dark:text-light sm:block">

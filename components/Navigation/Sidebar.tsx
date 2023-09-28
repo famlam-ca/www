@@ -72,20 +72,19 @@ const Sidebar = () => {
         </button>
 
         {/* <!-- Servers --> */}
-        <button
-          onClick={() => router.push("/servers")}
+        <Link
+          href="https://panel.famlam.ca/"
+          target="_blank"
           className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24"
         >
           <div>
             <HiOutlineServerStack size={24} />
           </div>
           <h3 className="lg:invisible xl:visible">Server Manager</h3>
-          <Link href="https://panel.famlam.ca/">
-            <span className="rounded-radius1 bg-alert px-2 py-0.5 text-xs text-light lg:invisible xl:visible">
-              0
-            </span>
-          </Link>
-        </button>
+          <span className="rounded-radius1 bg-alert px-2 py-0.5 text-xs text-light lg:invisible xl:visible">
+            0
+          </span>
+        </Link>
 
         {/* <!-- Upload --> */}
         <button
@@ -106,7 +105,7 @@ const Sidebar = () => {
               onClick={handleLogout}
               className="relative bottom-8 ml-8 flex h-14 items-center gap-4 transition-all duration-200 ease-in-out hover:ml-12 hover:text-primary lg:w-24 xl:w-24"
             >
-              <HiArrowLeftOnRectangle size={24} />
+              <HiArrowRightOnRectangle size={24} />
               <h3 className="lg:invisible xl:visible">Sign Out</h3>
             </button>
           ) : (

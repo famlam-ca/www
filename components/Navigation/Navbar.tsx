@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 import ThemeToggle from "@/hooks/useTheme";
 
@@ -10,72 +11,120 @@ import NavDropdown from "./NavDropdown";
 import Logo from "../Logo";
 
 interface NavbarProps {
-  children?: React.ReactNode;
+  children: React.ReactNode;
 }
 
 const Navbar: React.FC<NavbarProps> = ({ children }) => {
   const router = useRouter();
 
   return (
-    <div className="w-full">
-      <nav className="flex items-center max-md:justify-center">
+    <>
+      <div className="flex items-center max-md:justify-center">
         <div className="md:ml md:ml-4 lg:ml-32">
           <Logo />
         </div>
         <NavDropdown />
 
-        <div className="hidden text-base md:flex md:items-center">
+        <nav className="hidden gap-4 md:flex md:items-center">
           <button
             onClick={() => router.push("/dashboard")}
-            className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
+            className="
+            after:
+            relative
+            inline-block
+            text-sm
+            font-semibold
+            text-dark
+            after:absolute
+            after:bottom-0
+            after:left-0
+            after:h-0.5
+            after:w-full
+            after:origin-bottom-right
+            after:scale-x-0
+            after:bg-primary
+            after:transition-transform
+            after:duration-200
+            after:content-['']
+            hover:after:origin-bottom-left
+            hover:after:scale-100
+            dark:text-light
+            "
           >
             Dashboard
           </button>
 
-          <nav className="flex">
-            <button
-              onClick={() => router.push("/servers")}
-              className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
+          <Link
+            href="https://panel.famlam.ca/"
+            target="_blank"
+            className="flex items-center"
+          >
+            <span
+              className="
+              relative
+              flex
+              text-sm
+              font-semibold
+              text-dark
+              after:absolute
+              after:bottom-0
+              after:left-0
+              after:h-0.5
+              after:w-full
+              after:origin-bottom-right
+              after:scale-x-0
+              after:bg-primary
+              after:transition-transform
+              after:duration-200
+              after:content-['']
+              hover:after:origin-bottom-left
+              hover:after:scale-100
+              dark:text-light
+              "
             >
               Server Manager
-            </button>
-            <Link
-              href="https://panel.famlam.ca/"
-              target="_blank"
-              className="ml-1 text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth="1.5"
-                stroke="currentColor"
-                className="h-5 w-5"
-              >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
-                />
-              </svg>
-            </Link>
+            </span>
+            <div className="relative -top-2 right-0">
+              <HiMiniArrowUpRight size={12} />
+            </div>
+          </Link>
 
-            <button
-              onClick={() => router.push("/about")}
-              className="ml-5 text-sm font-semibold text-dark transition-all hover:text-primary dark:text-light dark:hover:text-primary"
-            >
-              About
-            </button>
-          </nav>
+          <button
+            onClick={() => router.push("/about")}
+            className="
+            after:
+            relative
+            inline-block
+            text-sm
+            font-semibold
+            text-dark
+            after:absolute
+            after:bottom-0
+            after:left-0
+            after:h-0.5
+            after:w-full
+            after:origin-bottom-right
+            after:scale-x-0
+            after:bg-primary
+            after:transition-transform
+            after:duration-200
+            after:content-['']
+            hover:after:origin-bottom-left
+            hover:after:scale-100
+            dark:text-light
+            "
+          >
+            About
+          </button>
+        </nav>
 
-          <div className="absolute right-8 flex items-center gap-4 max-md:hidden md:right-16 lg:right-32">
-            <ThemeToggle />
-            <NavEntry />
-          </div>
+        <div className="absolute right-8 flex items-center gap-4 max-md:hidden md:right-16 lg:right-32">
+          <ThemeToggle />
+          <NavEntry />
         </div>
-      </nav>
-      <main className="h-full flex-1 overflow-y-auto">{children}</main>
-    </div>
+      </div>
+      <main>{children}</main>
+    </>
   );
 };
 
