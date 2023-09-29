@@ -5,6 +5,7 @@ import Link from "next/link";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
 import ThemeToggle from "@/hooks/useTheme";
+import ThemeSwitch from "@/hooks/useThemeSwitch";
 
 import NavEntry from "../Auth/NavEntry";
 import NavDropdown from "./NavDropdown";
@@ -119,7 +120,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
         </nav>
 
         <div className="absolute right-8 flex items-center gap-4 max-md:hidden md:right-16 lg:right-32">
-          <ThemeToggle />
+          <ThemeSwitch />
+          {/* <ThemeToggle /> */}
           <NavEntry />
         </div>
       </div>

@@ -17,7 +17,7 @@ const ThemeToggle = () => {
   }
 
   return (
-    <div>
+    <>
       {theme === "dark" ? (
         <button
           onClick={() => setTheme("light")}
@@ -51,7 +51,7 @@ const ThemeToggle = () => {
           </svg>
         </button>
       )}
-    </div>
+    </>
   );
 };
 
