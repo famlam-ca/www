@@ -19,11 +19,28 @@ const Footer = () => {
           </Link>
           . All Rights Reserved.
         </span>
-        <ul className="mt-3 flex flex-wrap items-center text-sm font-medium text-dark dark:text-light sm:mt-0">
+        <ul className="mt-3 flex flex-wrap items-center gap-4 text-sm font-medium text-dark dark:text-light sm:mt-0 md:gap-6">
           <li>
             <button
               onClick={() => router.push("/about")}
-              className="mr-4 text-primary hover:underline md:mr-6 "
+              className="
+              relative
+              flex
+              text-sm
+              after:absolute
+              after:bottom-0
+              after:left-0
+              after:h-0.5
+              after:w-full
+              after:origin-bottom-right
+              after:scale-x-0
+              after:bg-primary
+              after:transition-transform
+              after:duration-200
+              after:content-['']
+              hover:after:origin-bottom-left
+              hover:after:scale-100
+              "
             >
               About
             </button>
@@ -31,7 +48,24 @@ const Footer = () => {
           <li>
             <button
               onClick={() => router.push("/privacy")}
-              className="mr-4 text-primary hover:underline md:mr-6"
+              className="
+              relative
+              flex
+              text-sm
+              after:absolute
+              after:bottom-0
+              after:left-0
+              after:h-0.5
+              after:w-full
+              after:origin-bottom-right
+              after:scale-x-0
+              after:bg-primary
+              after:transition-transform
+              after:duration-200
+              after:content-['']
+              hover:after:origin-bottom-left
+              hover:after:scale-100
+              "
             >
               Privacy Policy
             </button>
@@ -39,7 +73,24 @@ const Footer = () => {
           <li>
             <button
               onClick={() => router.push("/licensing")}
-              className="mr-4 text-primary hover:underline md:mr-6"
+              className="
+              relative
+              flex
+              text-sm
+              after:absolute
+              after:bottom-0
+              after:left-0
+              after:h-0.5
+              after:w-full
+              after:origin-bottom-right
+              after:scale-x-0
+              after:bg-primary
+              after:transition-transform
+              after:duration-200
+              after:content-['']
+              hover:after:origin-bottom-left
+              hover:after:scale-100
+              "
             >
               Licensing
             </button>
@@ -47,7 +98,24 @@ const Footer = () => {
           <li>
             <button
               onClick={() => router.push("/contact")}
-              className="text-primary hover:underline"
+              className="
+              relative
+              flex
+              text-sm
+              after:absolute
+              after:bottom-0
+              after:left-0
+              after:h-0.5
+              after:w-full
+              after:origin-bottom-right
+              after:scale-x-0
+              after:bg-primary
+              after:transition-transform
+              after:duration-200
+              after:content-['']
+              hover:after:origin-bottom-left
+              hover:after:scale-100
+              "
             >
               Contact
             </button>

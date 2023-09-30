@@ -4,9 +4,7 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { HiMiniArrowUpRight } from "react-icons/hi2";
 
-import ThemeToggle from "@/hooks/useTheme";
-import ThemeSwitch from "@/hooks/useThemeSwitch";
-
+import ThemeSwitch from "@/hooks/useTheme";
 import NavEntry from "../Auth/NavEntry";
 import NavDropdown from "./NavDropdown";
 import Logo from "../Logo";
@@ -24,15 +22,43 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
         <div className="md:ml md:ml-4 lg:ml-32">
           <Logo />
         </div>
-        <NavDropdown />
+        <div className="md:hidden">
+          <NavDropdown />
+        </div>
 
         <nav className="hidden gap-4 md:flex md:items-center">
           <button
+            onClick={() => router.push("/")}
+            className="
+            relative
+            flex
+            text-sm
+            font-semibold
+            text-dark
+            after:absolute
+            after:bottom-0
+            after:left-0
+            after:h-0.5
+            after:w-full
+            after:origin-bottom-right
+            after:scale-x-0
+            after:bg-primary
+            after:transition-transform
+            after:duration-200
+            after:content-['']
+            hover:after:origin-bottom-left
+            hover:after:scale-100
+            dark:text-light
+            "
+          >
+            Home
+          </button>
+
+          <button
             onClick={() => router.push("/dashboard")}
             className="
-            after:
             relative
-            inline-block
+            flex
             text-sm
             font-semibold
             text-dark
@@ -93,9 +119,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
           <button
             onClick={() => router.push("/about")}
             className="
-            after:
             relative
-            inline-block
+            flex
             text-sm
             font-semibold
             text-dark
@@ -119,9 +144,18 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
           </button>
         </nav>
 
-        <div className="absolute right-8 flex items-center gap-4 max-md:hidden md:right-16 lg:right-32">
+        <div
+          className="
+        absolute
+        flex
+        items-center
+        gap-4
+        max-md:hidden
+        md:right-16
+        lg:right-32
+        "
+        >
           <ThemeSwitch />
-          {/* <ThemeToggle /> */}
           <NavEntry />
         </div>
       </div>

@@ -10,7 +10,7 @@ import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Humble Home Network",
-  description: "A very descriptive description",
+  description: "A Humble Home Network for Friends and Family",
 };
 
 export default function RootLayout({
