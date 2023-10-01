@@ -88,7 +88,7 @@ const Landing = () => {
                 alt="Banner credit"
                 src={Banner}
               />
-              <span className="mt-2 transition">myhomelab.gr</span>
+              <span className="mt-2 transition">Zois Roupas</span>
             </Link>
           </div>
         </section>

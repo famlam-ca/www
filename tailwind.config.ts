@@ -32,6 +32,9 @@ module.exports = {
 
         uploadFile: "#02387e1a",
       },
+      backgroundImage: {
+        aboutBanner: "url('../public/images/aboutBanner.png')",
+      },
       padding: {
         cardPadding: "1.8rem",
         padding1: "1.2rem",

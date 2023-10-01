@@ -2,15 +2,12 @@ import Image from "next/image";
 import Link from "next/link";
 
 import Navbar from "@/components/Navigation/Navbar";
-import Banner from "@/public/images/Banner.gif";
-import Logo from "@/components/Logo";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
 import { Button } from "@/components/ui/button";
-import { CalendarDays } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const About = () => {
@@ -18,24 +15,11 @@ const About = () => {
     <main className="mt-0 h-full bg-gradient-to-br from-backgroundLight via-light to-backgroundLight dark:from-backgroundDark dark:via-backgroundVariant dark:to-backgroundDark">
       <Navbar>
         <section className="flex flex-col items-center justify-center">
-          <header className="flex w-full flex-col items-center">
-            <h1 className="text-center font-bold tracking-tighter text-dark dark:text-light md:text-5xl">
-              About
-            </h1>
-            <Link
-              href="https://myhomelab.gr/"
-              className="group/banner flex flex-col text-center font-semibold"
-              target="_blank"
-            >
-              <Image
-                className="w-auto md:max-w-md"
-                alt="Banner credit"
-                src={Banner}
-              />
-              <span className="mt-2 text-muted transition group-hover/banner:text-primary group-hover/banner:underline">
-                myhomelab.gr
-              </span>
-            </Link>
+          <header className="bg-aboutBanner h-80 w-full">
+            <div className="flex h-full flex-col items-center justify-center text-center font-bold tracking-widest text-light backdrop-blur-sm">
+              <h1 className="md:text-8xl">About</h1>
+              <h2 className="text-primary">A Humble Home Network</h2>
+            </div>
           </header>
 
           <article className="container my-16 max-w-3xl break-words leading-relaxed tracking-wide text-dark dark:text-light">
@@ -46,8 +30,8 @@ const About = () => {
             </div>
             <p>
               Initially my plan was to create a place for me to collect all and
-              any data, that I wished to display, in a central location. This
-              lead me down the path of learning basic{" "}
+              any data that I wished to display, in a central location. This led
+              me down the path of learning basic{" "}
               <Link
                 target="_blank"
                 href="https://en.wikipedia.org/wiki/HTML5"
@@ -75,24 +59,24 @@ const About = () => {
               <div className="h-[1px] rounded-full bg-muted"></div>
             </div>
             <p>
-              Way back, around 2015, I started to build minecraft servers for my
-              friends and myself. This started me off on my journey to develop a
-              homelab. Although in the beginning services were running on my PC,
-              I would soon get my hand on spare parts to use as my first
-              servers. The lab has come a long way from then, even though the
+              Way back, around 2015, I started building Minecraft servers for my
+              friends and myself. This started me off on my journey developing a
+              homelab. Although at the beginning services were running on my PC,
+              I would soon get my hands on spare parts to use as my first
+              server. The lab has come a long way since then. Even though the
               machines are still old PCs, they are much more powerful.
             </p>
             <p className="mt-2">
-              The upgrading over the years has allowed to me to run more and
-              more services. At some point in adding to my network I had the
-              idea of localizing management, since I was jumping around quite a
-              lot between VMs, containers, and GUIs. Eventually I decided to
-              start creating a website, with the plan to use established systems
-              to manage everything in one interface.
+              Upgrades over the years have allowed me to run more and more
+              services, and expand my network. At some point during my additions
+              to my network I had the idea of localizing management, since I was
+              jumping around quite a lot between VMs, containers, and GUIs.
+              Eventually I decided to start creating a website, with the plan to
+              use established systems to manage everything from one interface.
             </p>
             <p className="mt-2">
               As previously mentioned I wanted to create a localized web
-              interface for services running in my network. And after I had
+              interface for services running on my network. And after I had
               created my first{" "}
               <HoverCard>
                 <HoverCardTrigger asChild>
@@ -120,21 +104,27 @@ const About = () => {
                 </Link>
               </HoverCard>{" "}
               using HTML and CSS I moved on, trying to implement some
-              functionally, since at the moment it was just an interface.
+              functionalities, since at the moment it was just an interface.
               However, anyone with any amount of experience with a web UI would
               realize that the old UI was hardly fit to host any functionality,
               such as server statics.
             </p>
             <p className="mt-2">
-              This is why I went through several iterations of the now called
+              This is why I went through several iterations of the now-called
               dashboard.{" "}
               <span className="text-muted">
                 {"(The first being the one at old.famlam.ca)"}
               </span>{" "}
               During this process I started to create other pages, at the
               beginning simply because I was procrastinating the making/redesign
-              of the dashboard,
+              of the dashboard, but later on because I wanted a more rounded
+              experience. At this point this project has developed and is
+              developing faster and better than ever before. I still have a lot
+              to learn. Trust me I know I am still in the early stages of
+              programming. However, I now have a goal and a vision that
+              hopefully can fulfill my expectations of this project.
             </p>
+            <p></p>
             {/* End Goal? */}
             <div className="my-6">
               <h2 className="font-bold text-muted">
@@ -142,7 +132,12 @@ const About = () => {
               </h2>
               <div className="h-[1px] rounded-full bg-muted"></div>
             </div>
-            <p>Localized web management.</p>
+            <p>
+              Speaking of expectations mine are way to high. That being said I
+              don't think this is a bad thing. Although I do feature creep a
+              lot, these additions allow me to learn and explore alternatives to
+              features and practices I already know.
+            </p>
             <p>...</p>
           </article>
         </section>
