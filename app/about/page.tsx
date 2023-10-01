@@ -86,9 +86,7 @@ const About = () => {
                   <HoverCardContent className="group/hoverContent w-80">
                     <div className="flex justify-between space-x-4">
                       <Avatar>
-                        <AvatarImage
-                          src={"https://github.com/SlickYeet/famlam.ca"}
-                        />
+                        <AvatarImage src={"https://github.com/famlam-ca.png"} />
                         <AvatarFallback>HHN</AvatarFallback>
                       </Avatar>
                       <div className="space-y-1">
