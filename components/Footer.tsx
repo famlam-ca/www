@@ -46,8 +46,9 @@ const Footer = () => {
             </button>
           </li>
           <li>
-            <button
-              onClick={() => router.push("/privacy")}
+            <Link
+              target="_blank"
+              href="https://github.com/SlickYeet/famlam.ca"
               className="
               relative
               flex
@@ -67,33 +68,8 @@ const Footer = () => {
               hover:after:scale-100
               "
             >
-              Privacy Policy
-            </button>
-          </li>
-          <li>
-            <button
-              onClick={() => router.push("/licensing")}
-              className="
-              relative
-              flex
-              text-sm
-              after:absolute
-              after:bottom-0
-              after:left-0
-              after:h-0.5
-              after:w-full
-              after:origin-bottom-right
-              after:scale-x-0
-              after:bg-primary
-              after:transition-transform
-              after:duration-200
-              after:content-['']
-              hover:after:origin-bottom-left
-              hover:after:scale-100
-              "
-            >
-              Licensing
-            </button>
+              GitHub
+            </Link>
           </li>
           <li>
             <button
