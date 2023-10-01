@@ -15,7 +15,7 @@ const About = () => {
     <main className="mt-0 h-full bg-gradient-to-br from-backgroundLight via-light to-backgroundLight dark:from-backgroundDark dark:via-backgroundVariant dark:to-backgroundDark">
       <Navbar>
         <section className="flex flex-col items-center justify-center">
-          <header className="bg-aboutBanner h-80 w-full">
+          <header className="h-80 w-full bg-aboutBanner">
             <div className="flex h-full flex-col items-center justify-center text-center font-bold tracking-widest text-light backdrop-blur-sm">
               <h1 className="md:text-8xl">About</h1>
               <h2 className="text-primary">A Humble Home Network</h2>
@@ -134,7 +134,7 @@ const About = () => {
             </div>
             <p>
               Speaking of expectations mine are way to high. That being said I
-              don't think this is a bad thing. Although I do feature creep a
+              don{"'"}t think this is a bad thing. Although I do feature creep a
               lot, these additions allow me to learn and explore alternatives to
               features and practices I already know.
             </p>
