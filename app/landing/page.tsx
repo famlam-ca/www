@@ -1,8 +1,6 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
 import {
   HiOutlineAcademicCap,
   HiOutlineServerStack,
@@ -10,7 +8,6 @@ import {
 } from "react-icons/hi2";
 
 import Navbar from "@/components/Navigation/Navbar";
-import Banner from "@/public/images/Banner.gif";
 
 const Landing = () => {
   const router = useRouter();
@@ -42,7 +39,7 @@ const Landing = () => {
                 </div>
                 <button
                   onClick={() => router.push("/dashboard")}
-                  className="group/hoverLeft mx-0 my-4 inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
+                  className="group/hoverLeft mx-0 my-4 inline-flex items-center font-semibold text-primary md:my-2 lg:mb-0"
                 >
                   Explore
                   <div className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4">
@@ -66,7 +63,7 @@ const Landing = () => {
                 </div>
                 <button
                   onClick={() => router.push("/about")}
-                  className="group/hoverLeft mx-0 inline-flex items-center font-semibold text-primary md:mb-2 lg:mb-0"
+                  className="group/hoverLeft mx-0 inline-flex items-center whitespace-nowrap font-semibold text-primary md:my-2 lg:mb-0"
                 >
                   Learn More
                   <div className="ml-2 h-4 w-4 transition-all group-hover/hoverLeft:ml-4">
@@ -76,19 +73,8 @@ const Landing = () => {
               </div>
             </div>
           </div>
-          {/* Banner and credit to HomeLab gif */}
-          <Link
-            href="https://myhomelab.gr/"
-            className="flex flex-col text-center font-semibold hover:text-primary hover:underline"
-            target="_blank"
-          >
-            <Image
-              className="w-auto md:max-w-md"
-              alt="Banner credit"
-              src={Banner}
-            />
-            <span className="mt-2 transition">Zois Roupas</span>
-          </Link>
+
+          <div className="bg-landingBanner relative h-3/4 w-full bg-contain blur-sm max-md:my-6" />
         </div>
       </section>
     </Navbar>

@@ -34,6 +34,7 @@ module.exports = {
       },
       backgroundImage: {
         aboutBanner: "url('../public/images/aboutBanner.png')",
+        landingBanner: "url('../public/images/landingBanner.png')",
       },
       padding: {
         cardPadding: "1.8rem",
@@ -50,6 +51,10 @@ module.exports = {
         dashboard: "1fr",
 
         logs: "2.6rem auto",
+      },
+      CanvasGradient: {
+        Banner:
+          "linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%)",
       },
       borderRadius: {
         cardRadius: "2rem",
