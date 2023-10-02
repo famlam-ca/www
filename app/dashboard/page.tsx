@@ -134,7 +134,7 @@ const Dashboard = () => {
                       <TableCell className="max-md:hidden">
                         {server.uptime}
                       </TableCell>
-                      <TableCell className="text-right text-primary">
+                      <TableCell className="text-right text-primary max-md:hidden">
                         <Link href="#">Details</Link>
                       </TableCell>
                     </TableRow>
