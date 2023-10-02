@@ -1,4 +1,6 @@
-import Image from "next/image";
+"use client";
+
+import { useEffect } from "react";
 import Link from "next/link";
 
 import Navbar from "@/components/Navigation/Navbar";
@@ -11,6 +13,10 @@ import { Button } from "@/components/ui/button";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const About = () => {
+  useEffect(() => {
+    document.title = "About | HHN";
+  });
+
   return (
     <Navbar>
       <section className="flex flex-col items-center justify-center">

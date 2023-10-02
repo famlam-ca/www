@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
 
 import { HiOutlineCpuChip, HiOutlineCircleStack } from "react-icons/hi2";
@@ -22,6 +23,10 @@ import {
 } from "@/components/ui/table";
 
 const Dashboard = () => {
+  useEffect(() => {
+    document.title = "Dashboard | HHN";
+  });
+
   return (
     <Sidebar>
       <section className="mx-6">

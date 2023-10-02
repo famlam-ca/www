@@ -1,5 +1,6 @@
 "use client";
 
+import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import {
   HiOutlineAcademicCap,
@@ -10,6 +11,10 @@ import {
 import Navbar from "@/components/Navigation/Navbar";
 
 const Landing = () => {
+  useEffect(() => {
+    document.title = "Humble Home Network";
+  });
+
   const router = useRouter();
 
   return (
@@ -74,7 +79,7 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="bg-landingBanner relative h-3/4 w-full bg-contain blur-sm max-md:my-6" />
+          <div className="relative h-3/4 w-full bg-landingBanner bg-contain blur-sm max-md:my-6" />
         </div>
       </section>
     </Navbar>
