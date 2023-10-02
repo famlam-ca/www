@@ -6,6 +6,7 @@ import { HiUserCircle } from "react-icons/hi2";
 import { useUser } from "@/hooks/useUser";
 
 import NavDropdown from "@/components/Navigation/NavDropdown";
+import ProfileDropdown from "../Navigation/ProfileDropdown";
 import NavEntry from "@/components/Auth/NavEntry";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
@@ -30,9 +31,11 @@ const Header = () => {
               <small className="capitalize text-muted">{role}</small>
             </div>
             {avatar ? (
-              <Avatar>
-                <AvatarImage src={avatar} />
-              </Avatar>
+              <ProfileDropdown>
+                <Avatar>
+                  <AvatarImage src={avatar} />
+                </Avatar>
+              </ProfileDropdown>
             ) : (
               <button onClick={() => router.push("/account")} className="flex">
                 <HiUserCircle size={40} />

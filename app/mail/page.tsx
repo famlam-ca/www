@@ -1,19 +1,25 @@
-import Header from "@/components/Dashboard/Header";
 import Sidebar from "@/components/Navigation/Sidebar";
+import Header from "@/components/Dashboard/Header";
+import RightColumn from "@/components/Dashboard/RightColumn";
 
 const Mail = () => {
   return (
-    <main className="mt-0 h-screen bg-backgroundLight  dark:bg-backgroundDark">
-      <section className="mx-4 grid gap-7 max-md:grid-cols-dashboardMd md:mx-8 lg:m-auto lg:ml-0 lg:mr-8 lg:grid-cols-dashboardLg xl:grid-cols-dashboardXl ">
-        <Sidebar />
-        <div className="my-6">
-          <h1 className="text-dark dark:text-light">Email</h1>
-        </div>
-        <div className="mb-0 ml-2 mr-0 mt-2">
+    <Sidebar>
+      <section className="mx-4 gap-7 md:mx-8 lg:m-auto lg:ml-0 lg:mr-8">
+        <div className="flex items-center justify-between">
+          <div>
+            <h1 className="text-dark dark:text-light">Email</h1>
+            <small className="text-muted">Inbox</small>
+          </div>
           <Header />
         </div>
+        <iframe
+          src="https://mail.famlam.ca"
+          className="h-[calc(100vh-7rem)] w-full"
+        />
       </section>
-    </main>
+      <RightColumn />
+    </Sidebar>
   );
 };
 

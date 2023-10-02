@@ -7,6 +7,7 @@ interface SidebarItemProps {
   label: string;
   active: boolean;
   href: string;
+  className?: string;
 }
 
 const SidebarItem: React.FC<SidebarItemProps> = ({
@@ -14,6 +15,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
   label,
   active,
   href,
+  className,
 }) => {
   return (
     <Link
@@ -21,24 +23,32 @@ const SidebarItem: React.FC<SidebarItemProps> = ({
       className={twMerge(
         `
         text-md
+        relative
+        ml-12
         flex
-        h-auto
+        h-14
         w-full
         cursor-pointer
         flex-row
         items-center
-        gap-x-4
+        gap-4
+        whitespace-nowrap
         text-left
         font-medium
         text-muted
-        transition
+        transition-all
+        duration-200
+        ease-in-out
+        hover:ml-12
         hover:text-primary
+        md:ml-8
     `,
+        className,
         active && "text-primary",
       )}
     >
-      <Icon size={26} />
-      <p className="w-full truncate">{label}</p>
+      <Icon size={24} />
+      <p className="w-full truncate max-md:hidden md:visible">{label}</p>
     </Link>
   );
 };

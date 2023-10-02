@@ -6,7 +6,7 @@ import NasActivity from "./RightColumn/NasActivity";
 
 const RightColumn = () => {
   return (
-    <div className="my-6 flex flex-col">
+    <div className="mr-6 flex flex-col">
       <ScrollArea className="h-full shadow-Light hover:shadow-none dark:shadow-Dark dark:hover:shadow-none xl:h-[calc(100vh-1.5rem)]">
         <Logs />
         <Configs />

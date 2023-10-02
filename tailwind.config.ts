@@ -46,9 +46,8 @@ module.exports = {
         Btn: "0 0 2rem #000000",
       },
       gridTemplateColumns: {
-        dashboardXl: "14rem auto 24rem",
-        dashboardLg: "7rem auto 24rem",
-        dashboardMd: "1fr",
+        dashboardLg: "auto 30rem",
+        dashboard: "1fr",
 
         logs: "2.6rem auto",
       },

@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-backgroundLight dark:bg-backgroundDark">
         <ToasterProvider />
         <SupabaseProvider>
           <UserProvider>

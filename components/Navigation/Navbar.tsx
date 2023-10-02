@@ -17,7 +17,16 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
   const router = useRouter();
 
   return (
-    <>
+    <div
+      className="
+    bg-gradient-to-br
+    from-backgroundLight
+    via-light
+    to-backgroundLight
+    dark:from-backgroundDark
+    dark:via-backgroundVariant
+    dark:to-backgroundDark"
+    >
       <div className="flex items-center max-md:justify-center">
         <div className="md:ml md:ml-4 lg:ml-32">
           <Logo />
@@ -159,8 +168,8 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
           <NavEntry />
         </div>
       </div>
-      <main>{children}</main>
-    </>
+      <main className="h-full">{children}</main>
+    </div>
   );
 };
 

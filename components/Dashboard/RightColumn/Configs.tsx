@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Putty from "@/public/images/putty.png";
 import WinSCP from "@/public/images/WinSCP.png";
 import Image from "next/image";
@@ -17,9 +18,7 @@ const Configs = () => {
           </div>
           <div>
             <h3 className="mb-4 text-dark dark:text-light">Putty</h3>
-            <small className="transition-color mt-40 rounded-radius1 bg-primary px-3 py-1.5 text-sm font-medium text-dark duration-200 ease-in-out hover:bg-secondaryButton hover:text-light">
-              Download
-            </small>
+            <Button variant="secondary">Download</Button>
           </div>
         </a>
       </div>
@@ -34,9 +33,7 @@ const Configs = () => {
           </div>
           <div>
             <h3 className="mb-4 text-dark dark:text-light">WinSCP</h3>
-            <small className="transition-color mt-40 rounded-radius1 bg-primary px-3 py-1.5 text-sm font-medium text-dark duration-200 ease-in-out hover:bg-secondaryButton hover:text-light">
-              Download
-            </small>
+            <Button variant="secondary">Download</Button>
           </div>
         </a>
       </div>

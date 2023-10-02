@@ -12,17 +12,17 @@ import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 
 const About = () => {
   return (
-    <main className="mt-0 h-full bg-gradient-to-br from-backgroundLight via-light to-backgroundLight dark:from-backgroundDark dark:via-backgroundVariant dark:to-backgroundDark">
-      <Navbar>
-        <section className="flex flex-col items-center justify-center">
-          <header className="h-80 w-full bg-aboutBanner">
-            <div className="flex h-full flex-col items-center justify-center text-center font-bold tracking-widest text-light backdrop-blur-sm">
-              <h1 className="md:text-8xl">About</h1>
-              <h2 className="text-primary">A Humble Home Network</h2>
-            </div>
-          </header>
+    <Navbar>
+      <section className="flex flex-col items-center justify-center">
+        <header className="h-80 w-full bg-aboutBanner">
+          <div className="flex h-full flex-col items-center justify-center text-center font-bold tracking-widest text-light backdrop-blur-sm">
+            <h1 className="md:text-8xl">About</h1>
+            <h2 className="text-primary">A Humble Home Network</h2>
+          </div>
+        </header>
 
-          <article className="container my-16 max-w-3xl break-words leading-relaxed tracking-wide text-dark dark:text-light">
+        <article className="container my-16 max-w-3xl break-words leading-relaxed tracking-wide text-dark dark:text-light">
+          <div className="max-md:mx-4">
             {/* Why? */}
             <div className="my-6">
               <h2 className="font-bold text-muted">Why? - Reasons Why.</h2>
@@ -80,7 +80,9 @@ const About = () => {
               created my first{" "}
               <HoverCard>
                 <HoverCardTrigger asChild>
-                  <Button variant="link">webpage</Button>
+                  <Button variant="link" className="px-0">
+                    webpage
+                  </Button>
                 </HoverCardTrigger>
                 <Link target="_blank" href="https://old.famlam.ca">
                   <HoverCardContent className="group/hoverContent w-80">
@@ -90,11 +92,11 @@ const About = () => {
                         <AvatarFallback>HHN</AvatarFallback>
                       </Avatar>
                       <div className="space-y-1">
-                        <h4 className="text-sm font-semibold text-primary group-hover/hoverContent:underline">
+                        <h4 className="text-base font-semibold text-primary group-hover/hoverContent:underline">
                           old.famlam.ca
                         </h4>
-                        <p className="text-sm">
-                          The first look of www.famlam.ca.
+                        <p className="text-sm text-muted">
+                          The first design concept of www.famlam.ca.
                         </p>
                       </div>
                     </div>
@@ -111,7 +113,16 @@ const About = () => {
               This is why I went through several iterations of the now-called
               dashboard.{" "}
               <span className="text-muted">
-                {"(The first being the one at old.famlam.ca)"}
+                {"(The first being the one at "}
+                <Link target="_blank" href="https://old.famlam.ca">
+                  <Button
+                    variant="link"
+                    className="px-0 text-muted underline underline-offset-2 hover:text-primary"
+                  >
+                    old.famlam.ca
+                  </Button>
+                </Link>
+                {")"}
               </span>{" "}
               During this process I started to create other pages, at the
               beginning simply because I was procrastinating the making/redesign
@@ -132,15 +143,16 @@ const About = () => {
             </div>
             <p>
               Speaking of expectations mine are way to high. That being said I
-              don{"'"}t think this is a bad thing. Although I do feature creep a
+              don
+              {"'"}t think this is a bad thing. Although I do feature creep a
               lot, these additions allow me to learn and explore alternatives to
               features and practices I already know.
             </p>
             <p>...</p>
-          </article>
-        </section>
-      </Navbar>
-    </main>
+          </div>
+        </article>
+      </section>
+    </Navbar>
   );
 };
 

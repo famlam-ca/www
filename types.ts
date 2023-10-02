@@ -10,6 +10,7 @@ export interface UserDetails {
   billing_address?: Stripe.Address;
   payment_method?: Stripe.PaymentMethod[Stripe.PaymentMethod.Type];
   role: string;
+  email: string;
 }
 
 export interface Product {
