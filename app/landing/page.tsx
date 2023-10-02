@@ -20,7 +20,7 @@ const Landing = () => {
       <Navbar>
         <section className="flex text-muted">
           <div className="container mx-auto flex flex-col items-center px-5 py-16 md:mt-40 md:flex-row lg:mt-48 lg:px-20 lg:py-24">
-            <div className="mb-16 flex w-full flex-col items-center pt-0  text-left md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24 lg:text-center">
+            <div className="mb-16 flex w-full flex-col items-center pt-0 text-left md:mb-0 md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24 lg:text-center">
               <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-primary">
                 Welcome, Enjoy Your Stay!
               </h2>

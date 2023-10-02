@@ -81,9 +81,9 @@ const Sidebar = () => {
             <HiOutlineServerStack size={24} />
           </div>
           <h3 className="lg:invisible xl:visible">Server Manager</h3>
-          <span className="rounded-radius1 bg-alert px-2 py-0.5 text-xs text-light lg:invisible xl:visible">
+          {/* <span className="rounded-radius1 bg-alert px-2 py-0.5 text-xs text-light lg:invisible xl:visible">
             0
-          </span>
+          </span> */}
         </Link>
 
         {/* <!-- Upload --> */}

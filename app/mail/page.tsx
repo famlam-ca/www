@@ -1,4 +1,4 @@
-import Header from "@/components/Dashboard/RightColumn/Header";
+import Header from "@/components/Dashboard/Header";
 import Sidebar from "@/components/Navigation/Sidebar";
 
 const Mail = () => {

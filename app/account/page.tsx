@@ -1,4 +1,6 @@
-import Header from "@/components/Dashboard/RightColumn/Header";
+"use client";
+
+import Header from "@/components/Dashboard/Header";
 import Sidebar from "@/components/Navigation/Sidebar";
 
 const Account = () => {

@@ -7,11 +7,15 @@ import { useUser } from "@/hooks/useUser";
 
 import NavDropdown from "@/components/Navigation/NavDropdown";
 import NavEntry from "@/components/Auth/NavEntry";
+import { Avatar, AvatarImage } from "@/components/ui/avatar";
 
 const Header = () => {
   const router = useRouter();
 
-  const { user } = useUser();
+  const { user, userDetails } = useUser();
+  const username = userDetails?.username;
+  const role = userDetails?.role;
+  const avatar = userDetails?.avatar_url;
 
   return (
     <div className="mb-6 mt-4 flex justify-end">
@@ -21,13 +25,19 @@ const Header = () => {
           <>
             <div className="hidden text-dark dark:text-light sm:block">
               <p>
-                Hey, <b>Username</b>
+                Hey, <b>{username}</b>
               </p>
-              <small className="text-muted">Role</small>
+              <small className="capitalize text-muted">{role}</small>
             </div>
-            <button onClick={() => router.push("/account")} className="flex">
-              <HiUserCircle size={40} />
-            </button>
+            {avatar ? (
+              <Avatar>
+                <AvatarImage src={avatar} />
+              </Avatar>
+            ) : (
+              <button onClick={() => router.push("/account")} className="flex">
+                <HiUserCircle size={40} />
+              </button>
+            )}
           </>
         ) : (
           <div className="hidden text-dark dark:text-light sm:block">

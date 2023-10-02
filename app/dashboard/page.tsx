@@ -5,9 +5,21 @@ import Link from "next/link";
 import { HiOutlineCpuChip, HiOutlineCircleStack } from "react-icons/hi2";
 import { LuMemoryStick } from "react-icons/lu";
 
+import servers from "@/server_stats";
+
 import CircularProgressbar from "@/components/Dashboard/CircularProgressbar/CircularProgressbar";
-import RightColumn from "@/components/Dashboard/RightColumn/RightColumn";
+import RightColumn from "@/components/Dashboard/RightColumn";
 import Sidebar from "@/components/Navigation/Sidebar";
+import Header from "@/components/Dashboard/Header";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
 const Dashboard = () => {
   return (
@@ -15,10 +27,16 @@ const Dashboard = () => {
       <section className="mx-4 grid gap-7 max-md:grid-cols-dashboardMd md:mx-8 lg:m-auto lg:ml-0 lg:mr-8 lg:grid-cols-dashboardLg xl:grid-cols-dashboardXl ">
         <Sidebar />
         <div className="my-6">
-          <h1 className="text-dark dark:text-light">Dashboard</h1>
-          <small className=" block text-muted">
-            Server Hardware Statistics
-          </small>
+          <div className="flex items-center justify-between">
+            <div>
+              <h1 className="text-dark dark:text-light">Dashboard</h1>
+              <small className=" block text-muted">
+                Server Hardware Statistics
+              </small>
+            </div>
+            <Header />
+          </div>
+
           {/* <!-- Hardware summary --> */}
           <div className="grid lg:grid-cols-1 lg:gap-0 xl:grid-cols-3 xl:gap-6">
             {/* <!-- CPU usage --> */}
@@ -74,131 +92,62 @@ const Dashboard = () => {
           </div>
 
           {/* <!-- Server states --> */}
-          <div className="mt-8">
+          <div className="my-8">
             <h2 className="mb-3 text-dark dark:text-light">Servers</h2>
             <div className="rounded-cardRadius bg-backgroundLight p-cardPadding text-center text-dark shadow-Light hover:shadow-none dark:bg-backgroundVariant dark:text-light dark:shadow-Dark dark:hover:shadow-none">
-              <table className="w-full">
-                <thead>
-                  <tr>
-                    <th>Status</th>
-                    <th>Server name</th>
-                    <th>CPU Usage</th>
-                    <th>Memory Usage</th>
-                    <th className="">Uptime</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>NPM</td>
-                    <td className="success">3%</td>
-                    <td className="warning">72%</td>
-                    <td className="success">7:31</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>gs01</td>
-                    <td className="success">6%</td>
-                    <td className="success">34%</td>
-                    <td className="success">7:42</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>gs02</td>
-                    <td className="success">1%</td>
-                    <td className="success">6%</td>
-                    <td className="success">7:42</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>WebSrv</td>
-                    <td className="success">0.2%</td>
-                    <td className="success">56%</td>
-                    <td className="success">7:36</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>SQL-DB</td>
-                    <td className="success">1%</td>
-                    <td className="success">49%</td>
-                    <td className="success">7:39</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="success">Up</td>
-                    <td>DNS</td>
-                    <td className="success">0.6%</td>
-                    <td className="warning">70%</td>
-                    <td className="success">7:42</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="alert">Down</td>
-                    <td>PrintSrv</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>-</td>
-                    <td>
-                      <Link
-                        className="text-primary hover:underline"
-                        href="javascript:void(0)"
-                      >
-                        Details
-                      </Link>
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+              <Table>
+                <TableHeader>
+                  <TableRow className="whitespace-nowrap text-base font-semibold">
+                    <TableHead className="max-md:hidden">Status</TableHead>
+                    <TableHead>Server Name</TableHead>
+                    <TableHead>CPU Usage</TableHead>
+                    <TableHead>Memory Usage</TableHead>
+                    <TableHead className="max-md:hidden">Uptime</TableHead>
+                    <TableHead className="text-right max-md:hidden">
+                      Details
+                    </TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody className="text-dark dark:text-light">
+                  {servers.map((server) => (
+                    <TableRow key={server.status}>
+                      {server.status === "Up" ? (
+                        <TableCell className="text-success max-md:hidden">
+                          {server.status}
+                        </TableCell>
+                      ) : (
+                        <TableCell className="text-alert max-md:hidden">
+                          {server.status}
+                        </TableCell>
+                      )}
+                      <TableCell>{server.serverName}</TableCell>
+                      {server.cpuUsage <= "50%" ? (
+                        <TableCell className="text-success">
+                          {server.cpuUsage}
+                        </TableCell>
+                      ) : (
+                        <TableCell className="text-alert">
+                          {server.cpuUsage}
+                        </TableCell>
+                      )}
+                      <TableCell>{server.memoryUsage}</TableCell>
+                      <TableCell className="max-md:hidden">
+                        {server.uptime}
+                      </TableCell>
+                      <TableCell className="text-right text-primary">
+                        <Link href="#">Details</Link>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+                <TableCaption className="text-muted">
+                  Hardware Statics for VMs and Containers
+                </TableCaption>
+              </Table>
             </div>
             <Link
               className="mt-4 block text-center text-primary hover:underline"
-              href="javascript:void(0)"
+              href="#"
             >
               Show All
             </Link>
