@@ -168,7 +168,7 @@ const Navbar: React.FC<NavbarProps> = ({ children }) => {
           <NavEntry />
         </div>
       </div>
-      <main className="h-full">{children}</main>
+      <main>{children}</main>
     </div>
   );
 };

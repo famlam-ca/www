@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 import {
   HiOutlineAcademicCap,
   HiOutlineServerStack,
@@ -9,6 +10,7 @@ import {
 } from "react-icons/hi2";
 
 import Navbar from "@/components/Navigation/Navbar";
+import landingBanner from "@/public/images/landingBanner.png";
 
 const Landing = () => {
   useEffect(() => {
@@ -19,13 +21,13 @@ const Landing = () => {
 
   return (
     <Navbar>
-      <section className="flex h-[calc(100vh-5rem)] text-muted">
+      <section className="flex h-screen text-muted">
         <div className="container mx-auto flex flex-col items-center justify-center px-5 md:flex-row lg:px-20">
           <div className="flex w-full flex-col items-center pt-0 text-left md:w-1/2 md:items-start md:pr-16 md:text-left lg:flex-grow lg:pr-24 lg:text-center">
-            <h2 className="title-font mb-1 text-xs font-medium tracking-widest text-primary">
+            <h2 className="mb-1 text-center text-xs md:text-left font-medium tracking-widest text-primary">
               Welcome, Enjoy Your Stay!
             </h2>
-            <h1 className="text-2x1 mb-8 text-center font-bold tracking-tighter text-dark dark:text-light lg:text-left lg:text-5xl">
+            <h1 className="text-2x1 mb-8 text-center font-bold tracking-tighter text-dark dark:text-light md:text-left lg:text-5xl">
               Humble Home Network
             </h1>
             <div className="-mx-4 -mb-10 -mt-4 flex flex-col sm:-m-4 md:flex-row">
@@ -79,7 +81,12 @@ const Landing = () => {
             </div>
           </div>
 
-          <div className="relative h-3/4 w-full bg-landingBanner bg-contain blur-sm max-md:my-6" />
+          <div className="relative h-3/4 w-full bg-landingBanner bg-contain bg-no-repeat bg-center left-0 blur-sm max-md:my-6" />
+          {/* <Image
+            src={landingBanner}
+            alt="Banner"
+            className="relative h-2/4 w-full bg-landingBanner bg-contain blur-sm max-md:my-6"
+          /> */}
         </div>
       </section>
     </Navbar>
