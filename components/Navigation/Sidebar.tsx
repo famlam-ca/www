@@ -168,7 +168,7 @@ const Sidebar: React.FC<SidebarProps> = ({ children }) => {
           </div>
         </Box>
       </div>
-      <main className="grid-cols-dashboard grid w-full lg:grid-cols-dashboardLg">
+      <main className="grid w-full grid-cols-dashboard lg:grid-cols-dashboardLg">
         {children}
       </main>
     </div>

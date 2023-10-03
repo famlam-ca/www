@@ -39,7 +39,7 @@ const Dashboard = () => {
         </div>
 
         {/* Hardware Summary */}
-        <div className="flex lg:gap-0 xl:gap-6">
+        <div className="md:flex md:gap-2 lg:gap-4 xl:gap-6">
           {/* <!-- CPU usage --> */}
           <div className="mt-4 w-full rounded-cardRadius bg-backgroundLight p-cardPadding shadow-Light hover:shadow-none dark:bg-backgroundVariant dark:shadow-Dark dark:hover:shadow-none">
             <HiOutlineCpuChip
