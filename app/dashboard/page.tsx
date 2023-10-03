@@ -104,9 +104,6 @@ const Dashboard = () => {
                   <TableHead>CPU Usage</TableHead>
                   <TableHead>Memory Usage</TableHead>
                   <TableHead className="max-md:hidden">Uptime</TableHead>
-                  <TableHead className="text-right max-md:hidden">
-                    Details
-                  </TableHead>
                 </TableRow>
               </TableHeader>
               <TableBody className="text-dark dark:text-light">
@@ -135,9 +132,7 @@ const Dashboard = () => {
                     <TableCell className="max-md:hidden">
                       {server.uptime}
                     </TableCell>
-                    <TableCell className="text-right text-primary max-md:hidden">
-                      <Link href="#">Details</Link>
-                    </TableCell>
+                    <TableCell className="text-right text-primary max-md:hidden"></TableCell>
                   </TableRow>
                 ))}
               </TableBody>
@@ -146,12 +141,6 @@ const Dashboard = () => {
               </TableCaption>
             </Table>
           </div>
-          <Link
-            className="mt-4 block text-center text-primary hover:underline"
-            href="#"
-          >
-            Show All
-          </Link>
         </div>
       </section>
       <RightColumn />
